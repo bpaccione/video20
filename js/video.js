@@ -33,6 +33,37 @@ document.querySelector("#faster").addEventListener("click", function(){
 	console.log("Video sped up");
 	document.querySelector('video').playbackRate = 2;
 });
+document.querySelector("#skip").addEventListener("click", function(){
+	console.log("Skip 10 Seconds");
+	document.querySelector('video').currentTime += 10;
+});
+
+
+document.querySelector("#mute").addEventListener("click", function(){
+	console.log("video muted");
+	document.querySelector('#mute').textContent = "Unmute"
+	if (document.querySelector('video').muted === false){
+			document.querySelector('video').muted = true;
+	}
+	else {
+		document.querySelector('video').muted = false;
+	}
+});
+
+document.querySelector("#orig").addEventListener("click", function(){
+	document.querySelector('video').classList.add('video')
+	console.log("Original Style");
+});
+
+document.querySelector("#vintage").addEventListener("click", function(){
+	document.querySelector('video').classList.add('oldSchool')
+	console.log("Old School Style");
+});
+
+document.querySelector("#orig").addEventListener("click", function(){
+	document.querySelector('video').classList.remove('oldSchool')
+	console.log("Original Style");
+});
 
 
 
